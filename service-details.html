@@ -1,0 +1,745 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Frontend Development Services | Raja Akhani</title>
+
+  <meta name="description"
+    content="Explore Raja Akhani's frontend development services, including responsive web design, JavaScript development, website improvements, and user-friendly interfaces.">
+
+  <meta name="keywords"
+    content="Raja Akhani, Frontend Developer, Web Design, JavaScript Development, Responsive Websites, Website Optimization">
+
+  <meta name="author" content="Raja Akhani">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0b0b0b">
+
+  <!-- Replace with your real portfolio URL after deployment -->
+  <link rel="canonical" href="https://YOUR-DOMAIN.com/service-details.html">
+
+  <!-- Social Sharing Metadata -->
+  <meta property="og:title" content="Frontend Development Services | Raja Akhani">
+  <meta property="og:description"
+    content="Responsive websites, modern frontend interfaces, and JavaScript-powered experiences.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://YOUR-DOMAIN.com/service-details.html">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Service Details Styling -->
+  <style>
+    .service-details-hero {
+      padding: 45px 0 25px;
+    }
+
+    .service-details-hero .eyebrow {
+      color: var(--accent-color);
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .service-details-hero h1 {
+      font-size: clamp(30px, 5vw, 46px);
+      line-height: 1.2;
+      font-weight: 800;
+      margin: 12px 0;
+    }
+
+    .service-details-hero p {
+      max-width: 760px;
+      line-height: 1.9;
+    }
+
+    .service-details .services-list {
+      padding: 12px;
+      border-radius: 14px;
+      background: var(--surface-color);
+      border: 1px solid
+        color-mix(in srgb, var(--default-color), transparent 85%);
+    }
+
+    .service-details .services-list a {
+      display: block;
+      padding: 13px 15px;
+      margin-bottom: 5px;
+      border-radius: 8px;
+      color: var(--default-color);
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .service-details .services-list a:last-child {
+      margin-bottom: 0;
+    }
+
+    .service-details .services-list a:hover,
+    .service-details .services-list a.active {
+      color: var(--accent-color);
+      background: color-mix(in srgb, var(--accent-color), transparent 91%);
+      transform: translateX(4px);
+    }
+
+    .service-intro-card {
+      padding: 23px;
+      margin-top: 22px;
+      border-radius: 14px;
+      background: var(--surface-color);
+      border: 1px solid
+        color-mix(in srgb, var(--default-color), transparent 85%);
+    }
+
+    .service-intro-card h3 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .service-intro-card p,
+    .service-content p {
+      line-height: 1.9;
+    }
+
+    .service-content h2 {
+      font-size: clamp(24px, 3vw, 31px);
+      font-weight: 800;
+      margin: 25px 0 15px;
+    }
+
+    .service-content h3 {
+      font-size: 21px;
+      font-weight: 700;
+      margin: 25px 0 12px;
+    }
+
+    .service-visual {
+      min-height: 220px;
+      padding: 35px;
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      border-radius: 18px;
+      margin-bottom: 25px;
+      background:
+        linear-gradient(135deg,
+          color-mix(in srgb, var(--accent-color), transparent 85%),
+          var(--surface-color) 70%);
+      border: 1px solid
+        color-mix(in srgb, var(--accent-color), transparent 65%);
+    }
+
+    .service-visual-icon {
+      width: 76px;
+      height: 76px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 18px;
+      color: var(--contrast-color);
+      background: var(--accent-color);
+      font-size: 34px;
+    }
+
+    .service-visual h2 {
+      margin: 0 0 10px;
+    }
+
+    .service-visual p {
+      margin: 0;
+    }
+
+    .service-check-list {
+      list-style: none;
+      padding: 0;
+      margin: 22px 0;
+    }
+
+    .service-check-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 16px;
+      line-height: 1.7;
+    }
+
+    .service-check-list i {
+      color: var(--accent-color);
+      font-size: 19px;
+      margin-top: 3px;
+      flex-shrink: 0;
+    }
+
+    .service-feature-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 25px;
+    }
+
+    .service-feature {
+      padding: 22px;
+      border-radius: 13px;
+      background: var(--surface-color);
+      border: 1px solid
+        color-mix(in srgb, var(--default-color), transparent 85%);
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .service-feature:hover {
+      transform: translateY(-5px);
+      border-color: var(--accent-color);
+    }
+
+    .service-feature i {
+      font-size: 27px;
+      color: var(--accent-color);
+    }
+
+    .service-feature h3 {
+      font-size: 17px;
+      margin: 12px 0 8px;
+    }
+
+    .service-feature p {
+      margin: 0;
+      font-size: 14px;
+    }
+
+    .service-cta {
+      padding: 28px;
+      margin-top: 28px;
+      border-radius: 15px;
+      background: var(--surface-color);
+      border: 1px solid
+        color-mix(in srgb, var(--accent-color), transparent 55%);
+    }
+
+    .service-cta h2 {
+      margin-top: 0;
+    }
+
+    .service-cta-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      margin-top: 12px;
+      padding: 12px 22px;
+      border-radius: 7px;
+      background: var(--accent-color);
+      color: var(--contrast-color);
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .service-cta-button:hover {
+      opacity: 0.85;
+      transform: translateY(-3px);
+    }
+
+    @media (max-width: 767px) {
+      .service-details-hero {
+        padding-top: 25px;
+      }
+
+      .service-visual {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 25px;
+      }
+
+      .service-feature-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-intro-card,
+      .service-cta {
+        padding: 20px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .service-details *,
+      .service-details *::before,
+      .service-details *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body class="service-details-page">
+
+  <!-- Header / Sidebar -->
+  <header id="header" class="header dark-background d-flex flex-column">
+
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <div class="profile-img">
+      <img
+        src="assets/img/profile-img.png"
+        alt="Raja Akhani, Frontend Developer"
+        class="img-fluid rounded-circle">
+    </div>
+
+    <a href="index.html"
+      class="logo d-flex align-items-center justify-content-center">
+      <h1 class="sitename">Raja Akhani</h1>
+    </a>
+
+    <div class="social-links text-center">
+
+      <a href="https://github.com/akhaniraja89-rgb"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="GitHub">
+        <i class="bi bi-github"></i>
+      </a>
+
+      <!-- Replace # with your actual LinkedIn profile URL -->
+      <a href="#"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="LinkedIn">
+        <i class="bi bi-linkedin"></i>
+      </a>
+
+      <!-- Replace with your actual email -->
+      <a href="mailto:YOUR-EMAIL@example.com"
+        aria-label="Email">
+        <i class="bi bi-envelope"></i>
+      </a>
+
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li>
+          <a href="index.html#hero">
+            <i class="bi bi-house navicon"></i> Home
+          </a>
+        </li>
+
+        <li>
+          <a href="index.html#about">
+            <i class="bi bi-person navicon"></i> About
+          </a>
+        </li>
+
+        <li>
+          <a href="index.html#resume">
+            <i class="bi bi-file-earmark-text navicon"></i> Resume
+          </a>
+        </li>
+
+        <li>
+          <a href="index.html#portfolio">
+            <i class="bi bi-images navicon"></i> My Projects
+          </a>
+        </li>
+
+        <li>
+          <a href="index.html#services" class="active">
+            <i class="bi bi-hdd-stack navicon"></i> Services
+          </a>
+        </li>
+
+        <li>
+          <a href="index.html#contact">
+            <i class="bi bi-envelope navicon"></i> Contact
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title dark-background">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+
+        <h1 class="mb-2 mb-lg-0">My Services</h1>
+
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li class="current">Service Details</li>
+          </ol>
+        </nav>
+
+      </div>
+    </div>
+
+    <!-- Introduction -->
+    <section class="service-details-hero">
+      <div class="container" data-aos="fade-up">
+
+        <span class="eyebrow">What I Can Help With</span>
+
+        <h1>Frontend Development Services</h1>
+
+        <p>
+          I build responsive, accessible, and user-friendly websites using
+          modern frontend technologies. My focus is on clean layouts,
+          practical functionality, and experiences that work across
+          desktop, tablet, and mobile devices.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- Service Details -->
+    <section id="service-details" class="service-details section">
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <!-- Services Sidebar -->
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="services-list">
+              <a href="#web-design" class="active">
+                <i class="bi bi-palette me-2"></i> Responsive Web Design
+              </a>
+
+              <a href="#frontend-development">
+                <i class="bi bi-code-slash me-2"></i> Frontend Development
+              </a>
+
+              <a href="#javascript-development">
+                <i class="bi bi-braces me-2"></i> JavaScript Development
+              </a>
+
+              <a href="#website-improvement">
+                <i class="bi bi-speedometer2 me-2"></i> Website Improvements
+              </a>
+            </div>
+
+            <div class="service-intro-card">
+              <h3>My Approach</h3>
+
+              <p>
+                Every project starts with understanding its purpose.
+                I focus on clear structure, consistent styling,
+                responsive behavior, and maintainable code.
+              </p>
+
+              <a href="index.html#contact" class="service-cta-button">
+                Let's Discuss
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+
+          </div>
+
+          <!-- Main Content -->
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+
+            <!-- Web Design -->
+            <article id="web-design" class="service-content">
+
+              <div class="service-visual">
+                <div class="service-visual-icon">
+                  <i class="bi bi-palette"></i>
+                </div>
+
+                <div>
+                  <h2>Responsive Web Design</h2>
+
+                  <p>
+                    Clean, modern layouts designed to adapt to different
+                    screen sizes and provide a consistent user experience.
+                  </p>
+                </div>
+              </div>
+
+              <p>
+                I create website layouts using HTML5, CSS3, Bootstrap,
+                and responsive design techniques. The goal is to make
+                content easy to understand, navigation intuitive,
+                and page layouts consistent across devices.
+              </p>
+
+              <ul class="service-check-list">
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span>Mobile-friendly layouts for phones, tablets, and desktops.</span>
+                </li>
+
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span>Consistent spacing, typography, colors, and visual hierarchy.</span>
+                </li>
+
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span>Reusable sections, navigation menus, buttons, and cards.</span>
+                </li>
+
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span>Accessible markup and clear user interactions.</span>
+                </li>
+              </ul>
+
+            </article>
+
+            <!-- Frontend Development -->
+            <article id="frontend-development" class="service-content">
+
+              <h2>Frontend Development</h2>
+
+              <p>
+                I turn website designs into working web pages with
+                structured HTML, maintainable CSS, and reusable interface
+                components. I also customize existing templates to create
+                a more personal and professional result.
+              </p>
+
+              <div class="service-feature-grid">
+
+                <div class="service-feature">
+                  <i class="bi bi-layout-text-window"></i>
+                  <h3>Page Structure</h3>
+                  <p>Organized HTML sections and semantic page layouts.</p>
+                </div>
+
+                <div class="service-feature">
+                  <i class="bi bi-phone"></i>
+                  <h3>Responsive Layout</h3>
+                  <p>Layouts that adapt to different screen sizes.</p>
+                </div>
+
+                <div class="service-feature">
+                  <i class="bi bi-brush"></i>
+                  <h3>UI Customization</h3>
+                  <p>Colors, typography, buttons, cards, and visual polish.</p>
+                </div>
+
+                <div class="service-feature">
+                  <i class="bi bi-window-stack"></i>
+                  <h3>Template Customization</h3>
+                  <p>Personalizing starter templates for portfolio and project websites.</p>
+                </div>
+
+              </div>
+
+            </article>
+
+            <!-- JavaScript -->
+            <article id="javascript-development" class="service-content">
+
+              <h2>JavaScript Development</h2>
+
+              <p>
+                I use JavaScript to make websites interactive and dynamic.
+                This includes handling user events, updating page content,
+                validating forms, and working with APIs when required.
+              </p>
+
+              <ul class="service-check-list">
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span>DOM manipulation and event handling.</span>
+                </li>
+
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span>Form validation and interactive UI elements.</span>
+                </li>
+
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span>API integration for applications that use external data.</span>
+                </li>
+
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span>Debugging and improving JavaScript functionality.</span>
+                </li>
+              </ul>
+
+            </article>
+
+            <!-- Website Improvement -->
+            <article id="website-improvement" class="service-content">
+
+              <h2>Website Improvements</h2>
+
+              <p>
+                Existing websites can often be improved through better
+                responsive behavior, clearer layouts, more descriptive
+                page metadata, and fixes for visible interface issues.
+              </p>
+
+              <ul class="service-check-list">
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span>Fixing common layout and styling problems.</span>
+                </li>
+
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span>Improving mobile navigation and page readability.</span>
+                </li>
+
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span>Adding meaningful page titles and meta descriptions.</span>
+                </li>
+
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span>Reviewing image sizes, links, and basic frontend performance.</span>
+                </li>
+              </ul>
+
+            </article>
+
+            <!-- Technologies -->
+            <div class="service-intro-card">
+              <h3>Technologies I Work With</h3>
+
+              <p>
+                My current frontend learning and project toolkit includes:
+              </p>
+
+              <div class="service-feature-grid">
+
+                <div class="service-feature">
+                  <i class="bi bi-filetype-html"></i>
+                  <h3>HTML5 & CSS3</h3>
+                  <p>Semantic markup and responsive styling.</p>
+                </div>
+
+                <div class="service-feature">
+                  <i class="bi bi-bootstrap"></i>
+                  <h3>Bootstrap</h3>
+                  <p>Responsive grid systems and interface components.</p>
+                </div>
+
+                <div class="service-feature">
+                  <i class="bi bi-filetype-js"></i>
+                  <h3>JavaScript</h3>
+                  <p>Interactive behavior and application logic.</p>
+                </div>
+
+                <div class="service-feature">
+                  <i class="bi bi-git"></i>
+                  <h3>Git & GitHub</h3>
+                  <p>Version control and project repositories.</p>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Contact CTA -->
+            <div class="service-cta" data-aos="fade-up">
+
+              <h2>Have a Website Idea?</h2>
+
+              <p>
+                If you need a responsive landing page, a portfolio website,
+                or frontend improvements, share your project requirements
+                and let's discuss the next steps.
+              </p>
+
+              <a href="index.html#contact" class="service-cta-button">
+                <i class="bi bi-envelope"></i>
+                Contact Me
+              </a>
+
+              <a href="index.html#portfolio" class="service-cta-button">
+                <i class="bi bi-grid"></i>
+                View My Projects
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+
+      <div class="copyright text-center">
+        <p>
+          © <span id="copyright-year"></span>
+          <strong class="px-1 sitename">Raja Akhani</strong>
+          <span>All Rights Reserved</span>
+        </p>
+      </div>
+
+      <div class="credits text-center">
+        Designed and customized by
+        <a href="index.html">Raja Akhani</a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a
+    href="#"
+    id="scroll-top"
+    class="scroll-top d-flex align-items-center justify-content-center"
+    aria-label="Scroll to top">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+  <!-- Main JS -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Copyright Year -->
+  <script>
+    document.getElementById("copyright-year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>

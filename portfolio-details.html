@@ -1,0 +1,677 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Project Details | Raja Akhani - Frontend Developer</title>
+
+  <meta name="description"
+    content="Explore project details, technologies, features, and development work by Raja Akhani, a frontend developer building responsive websites and JavaScript applications.">
+
+  <meta name="keywords"
+    content="Raja Akhani, Frontend Developer, JavaScript Projects, Web Development Portfolio, Weather App, My Clock, SpendWise">
+
+  <meta name="author" content="Raja Akhani">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0b0b0b">
+
+  <!-- Update this URL after deploying your portfolio -->
+  <link rel="canonical" href="https://YOUR-DOMAIN.com/portfolio-details.html">
+
+  <!-- Open Graph SEO -->
+  <meta property="og:title" content="Project Details | Raja Akhani">
+  <meta property="og:description"
+    content="Discover my web development projects, features, and technologies.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://YOUR-DOMAIN.com/portfolio-details.html">
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Project Details Page Styling -->
+  <style>
+    .project-details-hero {
+      padding: 45px 0 25px;
+    }
+
+    .project-details-hero .eyebrow {
+      color: var(--accent-color);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .project-details-hero h1 {
+      font-size: clamp(30px, 5vw, 48px);
+      font-weight: 800;
+      line-height: 1.2;
+      margin: 12px 0;
+    }
+
+    .project-details-hero p {
+      max-width: 750px;
+      line-height: 1.8;
+    }
+
+    .project-preview {
+      overflow: hidden;
+      border-radius: 16px;
+      background: var(--surface-color);
+      border: 1px solid
+        color-mix(in srgb, var(--default-color), transparent 85%);
+    }
+
+    .project-preview .swiper-slide img {
+      width: 100%;
+      height: auto;
+      max-height: 600px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .project-preview .swiper-pagination {
+      position: relative;
+      padding: 20px 0;
+    }
+
+    .project-preview .swiper-pagination-bullet-active {
+      background: var(--accent-color);
+    }
+
+    .project-card {
+      padding: 25px;
+      border-radius: 16px;
+      margin-bottom: 24px;
+      background: var(--surface-color);
+      border: 1px solid
+        color-mix(in srgb, var(--default-color), transparent 85%);
+    }
+
+    .project-card h2,
+    .project-card h3 {
+      font-size: 21px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .project-info-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .project-info-list li {
+      display: flex;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid
+        color-mix(in srgb, var(--default-color), transparent 90%);
+      overflow-wrap: anywhere;
+    }
+
+    .project-info-list li:last-child {
+      border-bottom: 0;
+    }
+
+    .project-info-list i {
+      color: var(--accent-color);
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .project-info-list strong {
+      min-width: 100px;
+    }
+
+    .project-description {
+      line-height: 1.9;
+    }
+
+    .project-feature-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .project-feature-list li {
+      margin-bottom: 13px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .project-feature-list i {
+      color: var(--accent-color);
+      margin-top: 4px;
+    }
+
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tech-stack span {
+      padding: 8px 14px;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: 600;
+      background: color-mix(in srgb, var(--accent-color), transparent 88%);
+      border: 1px solid
+        color-mix(in srgb, var(--accent-color), transparent 60%);
+    }
+
+    .project-action {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 25px;
+    }
+
+    .project-action a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 20px;
+      border-radius: 7px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      transition: 0.3s ease;
+    }
+
+    .project-action .btn-project-primary {
+      background: var(--accent-color);
+      color: var(--contrast-color);
+      border: 1px solid var(--accent-color);
+    }
+
+    .project-action .btn-project-outline {
+      border: 1px solid
+        color-mix(in srgb, var(--default-color), transparent 60%);
+      color: var(--default-color);
+    }
+
+    .project-action a:hover {
+      transform: translateY(-3px);
+      opacity: 0.88;
+    }
+
+    .project-back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 15px;
+      color: var(--accent-color);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    @media (max-width: 767px) {
+      .project-details-hero {
+        padding-top: 25px;
+      }
+
+      .project-card {
+        padding: 20px;
+      }
+
+      .project-info-list li {
+        flex-wrap: wrap;
+      }
+    }
+  </style>
+</head>
+
+<body class="portfolio-details-page">
+
+  <!-- Header -->
+  <header id="header" class="header dark-background d-flex flex-column">
+
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <div class="profile-img">
+      <!-- Replace with your actual profile photo -->
+      <img
+        src="assets/img/profile-img.png"
+        alt="Raja Akhani - Frontend Developer"
+        class="img-fluid rounded-circle">
+    </div>
+
+    <a href="index.html"
+      class="logo d-flex align-items-center justify-content-center">
+      <h1 class="sitename">Raja Akhani</h1>
+    </a>
+
+    <div class="social-links text-center">
+      <a href="https://github.com/akhaniraja89-rgb"
+        target="_blank" rel="noopener noreferrer"
+        aria-label="GitHub">
+        <i class="bi bi-github"></i>
+      </a>
+
+      <!-- Replace # with your real LinkedIn profile URL -->
+      <a href="#"
+        target="_blank" rel="noopener noreferrer"
+        aria-label="LinkedIn">
+        <i class="bi bi-linkedin"></i>
+      </a>
+
+      <a href="mailto:YOUR-EMAIL@example.com"
+        aria-label="Email Raja Akhani">
+        <i class="bi bi-envelope"></i>
+      </a>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li>
+          <a href="index.html#hero">
+            <i class="bi bi-house navicon"></i> Home
+          </a>
+        </li>
+
+        <li>
+          <a href="index.html#about">
+            <i class="bi bi-person navicon"></i> About
+          </a>
+        </li>
+
+        <li>
+          <a href="index.html#resume">
+            <i class="bi bi-file-earmark-text navicon"></i> Resume
+          </a>
+        </li>
+
+        <li>
+          <a href="index.html#portfolio" class="active">
+            <i class="bi bi-images navicon"></i> My Projects
+          </a>
+        </li>
+
+        <li>
+          <a href="index.html#services">
+            <i class="bi bi-hdd-stack navicon"></i> Services
+          </a>
+        </li>
+
+        <li>
+          <a href="index.html#contact">
+            <i class="bi bi-envelope navicon"></i> Contact
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title dark-background">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0">Project Details</h1>
+
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#portfolio">My Projects</a></li>
+            <li class="current">Project Details</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Project Introduction -->
+    <section class="project-details-hero">
+      <div class="container" data-aos="fade-up">
+
+        <span class="eyebrow">Selected Work</span>
+
+        <h1>Weather Application</h1>
+
+        <p>
+          A responsive weather application built to practice JavaScript,
+          API integration, asynchronous data handling, and dynamic UI updates.
+          Users can search for a city and view weather information returned
+          by the configured weather API.
+        </p>
+
+        <a href="index.html#portfolio" class="project-back-link">
+          <i class="bi bi-arrow-left"></i>
+          Back to all projects
+        </a>
+
+      </div>
+    </section>
+
+    <!-- Project Details -->
+    <section id="portfolio-details" class="portfolio-details section">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <!-- Project Screenshots -->
+          <div class="col-lg-8">
+
+            <div class="project-preview" data-aos="fade-up">
+
+              <div class="portfolio-details-slider swiper init-swiper">
+
+                <script type="application/json" class="swiper-config">
+                  {
+                    "loop": true,
+                    "speed": 600,
+                    "autoplay": {
+                      "delay": 4000
+                    },
+                    "slidesPerView": 1,
+                    "pagination": {
+                      "el": ".swiper-pagination",
+                      "type": "bullets",
+                      "clickable": true
+                    }
+                  }
+                </script>
+
+                <div class="swiper-wrapper align-items-center">
+
+                  <!-- Replace these images with your real project screenshots -->
+                  <div class="swiper-slide">
+                    <img
+                      src="assets/img/portfolio/weather-app.png"
+                      alt="Weather application project preview"
+                      loading="lazy">
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img
+                      src="assets/img/portfolio/weather-app.png"
+                      alt="Weather application interface detail"
+                      loading="lazy">
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img
+                      src="assets/img/portfolio/weather-app.png"
+                      alt="Weather application responsive layout"
+                      loading="lazy">
+                  </div>
+
+                </div>
+
+                <div class="swiper-pagination"></div>
+
+              </div>
+            </div>
+
+            <!-- About Project -->
+            <div class="project-card mt-4" data-aos="fade-up">
+              <h2>About This Project</h2>
+
+              <div class="project-description">
+                <p>
+                  This project demonstrates how a frontend application can
+                  request data from an external API and present the results
+                  through a user-friendly interface.
+                </p>
+
+                <p>
+                  The development process focuses on writing readable
+                  JavaScript, connecting UI elements with application logic,
+                  handling user input, and displaying data dynamically.
+                  The layout is designed to work across desktop and mobile
+                  screens.
+                </p>
+
+                <p>
+                  This project is part of my continuous learning journey as
+                  I improve my frontend development and problem-solving skills.
+                </p>
+              </div>
+            </div>
+
+            <!-- Features -->
+            <div class="project-card" data-aos="fade-up">
+              <h2>Key Features</h2>
+
+              <ul class="project-feature-list">
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span>Search for weather information by city, if supported by the API integration.</span>
+                </li>
+
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span>Fetch and display weather data from an external API.</span>
+                </li>
+
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span>Update page content dynamically with JavaScript.</span>
+                </li>
+
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span>Responsive layout for different screen sizes.</span>
+                </li>
+
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span>Practice API requests, DOM manipulation, and error handling.</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Technologies -->
+            <div class="project-card" data-aos="fade-up">
+              <h2>Technologies Used</h2>
+
+              <div class="tech-stack">
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>JavaScript</span>
+                <span>Weather API</span>
+                <span>Responsive Design</span>
+                <span>Git</span>
+                <span>GitHub</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Project Sidebar -->
+          <div class="col-lg-4">
+
+            <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+              <h2>Project Information</h2>
+
+              <ul class="project-info-list">
+                <li>
+                  <i class="bi bi-folder2-open"></i>
+                  <div>
+                    <strong>Category</strong>
+                    <div>Frontend Development</div>
+                  </div>
+                </li>
+
+                <li>
+                  <i class="bi bi-person-workspace"></i>
+                  <div>
+                    <strong>Role</strong>
+                    <div>Frontend Developer</div>
+                  </div>
+                </li>
+
+                <li>
+                  <i class="bi bi-code-slash"></i>
+                  <div>
+                    <strong>Type</strong>
+                    <div>Personal Learning Project</div>
+                  </div>
+                </li>
+
+                <li>
+                  <i class="bi bi-calendar3"></i>
+                  <div>
+                    <strong>Status</strong>
+                    <div>Portfolio Project</div>
+                  </div>
+                </li>
+
+                <li>
+                  <i class="bi bi-tools"></i>
+                  <div>
+                    <strong>Stack</strong>
+                    <div>HTML, CSS, JavaScript, API</div>
+                  </div>
+                </li>
+              </ul>
+
+              <div class="project-action">
+
+                <!-- Your confirmed deployed project URL -->
+                <a
+                  href="https://weather-app-raja.web.app"
+                  class="btn-project-primary"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  <i class="bi bi-box-arrow-up-right"></i>
+                  Live Demo
+                </a>
+
+                <!-- Update if your repository URL differs -->
+                <a
+                  href="https://github.com/akhaniraja89-rgb"
+                  class="btn-project-outline"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  <i class="bi bi-github"></i>
+                  GitHub
+                </a>
+
+              </div>
+            </div>
+
+            <!-- Learning Outcomes -->
+            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+              <h3>What I Practiced</h3>
+
+              <ul class="project-feature-list">
+                <li>
+                  <i class="bi bi-lightning-charge"></i>
+                  <span>JavaScript fundamentals and application logic.</span>
+                </li>
+
+                <li>
+                  <i class="bi bi-diagram-3"></i>
+                  <span>Working with external data and asynchronous requests.</span>
+                </li>
+
+                <li>
+                  <i class="bi bi-window"></i>
+                  <span>DOM manipulation and user interface updates.</span>
+                </li>
+
+                <li>
+                  <i class="bi bi-phone"></i>
+                  <span>Responsive frontend design.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+              <h3>Explore More</h3>
+
+              <p>
+                Visit my main portfolio to explore more projects and
+                follow my web development journey.
+              </p>
+
+              <a href="index.html#portfolio" class="project-back-link">
+                View all projects
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+
+      <div class="copyright text-center">
+        <p>
+          © <span id="copyright-year"></span>
+          <strong class="px-1 sitename">Raja Akhani</strong>
+          <span>All Rights Reserved</span>
+        </p>
+      </div>
+
+      <div class="credits text-center">
+        Designed and customized by
+        <a href="index.html">Raja Akhani</a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a
+    href="#"
+    id="scroll-top"
+    class="scroll-top d-flex align-items-center justify-content-center"
+    aria-label="Scroll to top">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Dynamic Copyright Year -->
+  <script>
+    document.getElementById("copyright-year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,707 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>My Journey & Goals | Raja Akhani - Frontend Developer</title>
+
+  <meta name="description"
+    content="Explore Raja Akhani's web development learning journey, frontend skills, coding projects, and goals as an aspiring frontend developer.">
+
+  <meta name="keywords"
+    content="Raja Akhani, Frontend Developer, Web Development Journey, JavaScript Projects, HTML, CSS, Bootstrap, GitHub Portfolio">
+
+  <meta name="author" content="Raja Akhani">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0b0b0b">
+
+  <!-- Replace with your real domain after deployment -->
+  <link rel="canonical" href="https://YOUR-DOMAIN.com/starter-page.html">
+
+  <!-- Social Sharing -->
+  <meta property="og:title" content="My Journey & Goals | Raja Akhani">
+  <meta property="og:description"
+    content="My journey in frontend development, practical projects, and continuous learning.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://YOUR-DOMAIN.com/starter-page.html">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Bootstrap & Icons -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Page Styling -->
+  <style>
+    .journey-hero {
+      padding: 45px 0 30px;
+    }
+
+    .journey-eyebrow {
+      color: var(--accent-color);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .journey-hero h1 {
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.2;
+      font-weight: 800;
+      margin: 14px 0;
+    }
+
+    .journey-hero p {
+      max-width: 780px;
+      line-height: 1.9;
+    }
+
+    .journey-label {
+      color: var(--accent-color);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+    }
+
+    .journey-section {
+      padding: 30px 0 45px;
+    }
+
+    .journey-heading {
+      font-size: clamp(25px, 3vw, 32px);
+      font-weight: 800;
+      margin: 10px 0 15px;
+    }
+
+    .journey-card {
+      height: 100%;
+      padding: 25px;
+      border-radius: 16px;
+      background: var(--surface-color);
+      border: 1px solid
+        color-mix(in srgb, var(--default-color), transparent 85%);
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .journey-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--accent-color);
+    }
+
+    .journey-icon {
+      width: 54px;
+      height: 54px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 13px;
+      background: color-mix(in srgb, var(--accent-color), transparent 88%);
+      color: var(--accent-color);
+      font-size: 25px;
+      margin-bottom: 18px;
+    }
+
+    .journey-card h3 {
+      font-size: 19px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .journey-card p {
+      font-size: 14px;
+      line-height: 1.85;
+      margin-bottom: 0;
+    }
+
+    .journey-timeline {
+      position: relative;
+      padding-left: 28px;
+      border-left: 2px solid
+        color-mix(in srgb, var(--accent-color), transparent 55%);
+    }
+
+    .timeline-item {
+      position: relative;
+      padding: 0 0 28px 12px;
+    }
+
+    .timeline-item:last-child {
+      padding-bottom: 0;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      background: var(--accent-color);
+      left: -36px;
+      top: 5px;
+      box-shadow: 0 0 0 5px
+        color-mix(in srgb, var(--accent-color), transparent 86%);
+    }
+
+    .timeline-item h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .timeline-item p {
+      line-height: 1.85;
+      margin-bottom: 0;
+    }
+
+    .skill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .skill-list span {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 9px 13px;
+      border: 1px solid
+        color-mix(in srgb, var(--accent-color), transparent 65%);
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: 600;
+      background: color-mix(in srgb, var(--accent-color), transparent 92%);
+    }
+
+    .skill-list i {
+      color: var(--accent-color);
+    }
+
+    .journey-cta {
+      padding: 35px;
+      border-radius: 18px;
+      background:
+        linear-gradient(135deg,
+          color-mix(in srgb, var(--accent-color), transparent 88%),
+          var(--surface-color) 75%);
+      border: 1px solid
+        color-mix(in srgb, var(--accent-color), transparent 60%);
+    }
+
+    .journey-cta h2 {
+      font-size: clamp(24px, 3vw, 32px);
+      font-weight: 800;
+    }
+
+    .journey-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 12px 20px;
+      border-radius: 7px;
+      background: var(--accent-color);
+      color: var(--contrast-color);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      transition: transform 0.3s ease;
+    }
+
+    .journey-button:hover {
+      color: var(--contrast-color);
+      transform: translateY(-3px);
+    }
+
+    .journey-button-outline {
+      background: transparent;
+      color: var(--default-color);
+      border: 1px solid
+        color-mix(in srgb, var(--default-color), transparent 60%);
+    }
+
+    .journey-button-outline:hover {
+      color: var(--accent-color);
+    }
+
+    .journey-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    @media (max-width: 767px) {
+      .journey-hero {
+        padding-top: 25px;
+      }
+
+      .journey-card {
+        padding: 22px;
+      }
+
+      .journey-cta {
+        padding: 24px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .journey-card,
+      .journey-button {
+        transition: none;
+      }
+    }
+  </style>
+</head>
+
+<body class="starter-page-page">
+
+  <!-- Sidebar -->
+  <header id="header" class="header dark-background d-flex flex-column">
+
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <div class="profile-img">
+      <img
+        src="assets/img/profile-img.png"
+        alt="Raja Akhani - Frontend Developer"
+        class="img-fluid rounded-circle">
+    </div>
+
+    <a href="index.html"
+      class="logo d-flex align-items-center justify-content-center">
+      <h1 class="sitename">Raja Akhani</h1>
+    </a>
+
+    <div class="social-links text-center">
+
+      <a href="https://github.com/akhaniraja89-rgb"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="GitHub">
+        <i class="bi bi-github"></i>
+      </a>
+
+      <!-- Replace # with your actual LinkedIn profile URL -->
+      <a href="#"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="LinkedIn">
+        <i class="bi bi-linkedin"></i>
+      </a>
+
+      <!-- Replace with your actual email -->
+      <a href="mailto:YOUR-EMAIL@example.com"
+        aria-label="Email">
+        <i class="bi bi-envelope"></i>
+      </a>
+
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navmenu" class="navmenu">
+      <ul>
+
+        <li>
+          <a href="index.html#hero">
+            <i class="bi bi-house navicon"></i> Home
+          </a>
+        </li>
+
+        <li>
+          <a href="index.html#about">
+            <i class="bi bi-person navicon"></i> About
+          </a>
+        </li>
+
+        <li>
+          <a href="index.html#resume">
+            <i class="bi bi-file-earmark-text navicon"></i> Resume
+          </a>
+        </li>
+
+        <li>
+          <a href="index.html#portfolio">
+            <i class="bi bi-images navicon"></i> My Projects
+          </a>
+        </li>
+
+        <li>
+          <a href="index.html#services">
+            <i class="bi bi-hdd-stack navicon"></i> Services
+          </a>
+        </li>
+
+        <li>
+          <a href="index.html#contact">
+            <i class="bi bi-envelope navicon"></i> Contact
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title dark-background">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+
+        <h1 class="mb-2 mb-lg-0">My Journey</h1>
+
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">My Journey</li>
+          </ol>
+        </nav>
+
+      </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="journey-hero">
+      <div class="container" data-aos="fade-up">
+
+        <span class="journey-eyebrow">Learn • Build • Improve</span>
+
+        <h1>My Journey Into Web Development</h1>
+
+        <p>
+          I'm Raja Akhani, an aspiring frontend developer focused on
+          learning web technologies through practical projects.
+          My goal is to build responsive, useful, and professional
+          web experiences while continuously improving my coding skills.
+        </p>
+
+        <div class="journey-actions">
+          <a href="index.html#portfolio" class="journey-button">
+            <i class="bi bi-grid"></i>
+            Explore My Projects
+          </a>
+
+          <a href="index.html#contact"
+            class="journey-button journey-button-outline">
+            <i class="bi bi-chat-dots"></i>
+            Get in Touch
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Learning Journey -->
+    <section class="journey-section">
+      <div class="container">
+
+        <div class="mb-4" data-aos="fade-up">
+          <span class="journey-label">My Progress</span>
+          <h2 class="journey-heading">Learning Journey</h2>
+          <p>
+            I focus on building a strong foundation and applying
+            what I learn in real coding projects.
+          </p>
+        </div>
+
+        <div class="journey-timeline" data-aos="fade-up">
+
+          <div class="timeline-item">
+            <h3>01. HTML & Website Structure</h3>
+            <p>
+              Learned how to structure web pages with headings,
+              sections, links, images, forms, and semantic HTML elements.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <h3>02. CSS & Responsive Layouts</h3>
+            <p>
+              Practiced styling, spacing, layouts, Flexbox, responsive
+              design, and adapting existing website templates.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <h3>03. JavaScript & DOM</h3>
+            <p>
+              Working on JavaScript fundamentals, functions, arrays,
+              events, DOM manipulation, and interactive website features.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <h3>04. Practical Projects & GitHub</h3>
+            <p>
+              Applying my knowledge by building projects, testing
+              functionality, fixing bugs, and publishing code repositories.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <h3>05. My Next Goals</h3>
+            <p>
+              Continue improving JavaScript, strengthen responsive CSS,
+              learn modern frontend tools, and progress toward React
+              and more advanced development projects.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="journey-section">
+      <div class="container">
+
+        <div data-aos="fade-up">
+          <span class="journey-label">My Toolkit</span>
+          <h2 class="journey-heading">Technologies & Skills</h2>
+
+          <p>
+            Technologies I'm learning and practicing through coursework
+            and personal projects.
+          </p>
+        </div>
+
+        <div class="journey-card mt-4" data-aos="fade-up">
+
+          <h3>Frontend Development</h3>
+
+          <div class="skill-list">
+            <span><i class="bi bi-check-circle"></i> HTML5</span>
+            <span><i class="bi bi-check-circle"></i> CSS3</span>
+            <span><i class="bi bi-check-circle"></i> Bootstrap</span>
+            <span><i class="bi bi-check-circle"></i> JavaScript</span>
+            <span><i class="bi bi-check-circle"></i> DOM Manipulation</span>
+            <span><i class="bi bi-check-circle"></i> Responsive Design</span>
+          </div>
+
+          <h3 class="mt-4">Development Tools</h3>
+
+          <div class="skill-list">
+            <span><i class="bi bi-check-circle"></i> VS Code</span>
+            <span><i class="bi bi-check-circle"></i> Git</span>
+            <span><i class="bi bi-check-circle"></i> GitHub</span>
+            <span><i class="bi bi-check-circle"></i> Browser DevTools</span>
+            <span><i class="bi bi-check-circle"></i> Firebase Hosting</span>
+          </div>
+
+          <p class="mt-4 mb-0">
+            I continue practicing these technologies and update my
+            skills as I complete more projects.
+          </p>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Project Highlights -->
+    <section class="journey-section">
+      <div class="container">
+
+        <div data-aos="fade-up">
+          <span class="journey-label">Learning Through Practice</span>
+          <h2 class="journey-heading">Projects I'm Building</h2>
+
+          <p>
+            Each project helps me apply concepts, identify mistakes,
+            and improve my problem-solving skills.
+          </p>
+        </div>
+
+        <div class="row gy-4 mt-2">
+
+          <div class="col-md-6 col-lg-4" data-aos="fade-up">
+            <article class="journey-card">
+
+              <div class="journey-icon">
+                <i class="bi bi-clock-history"></i>
+              </div>
+
+              <h3>My Clock</h3>
+
+              <p>
+                A clock project built with HTML, CSS, and JavaScript
+                to practice time-based updates, interface design,
+                and dark mode.
+              </p>
+
+              <a
+                href="https://github.com/akhaniraja89-rgb/my-clock"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="project-back-link">
+                View on GitHub
+                <i class="bi bi-arrow-up-right"></i>
+              </a>
+
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <article class="journey-card">
+
+              <div class="journey-icon">
+                <i class="bi bi-cloud-sun"></i>
+              </div>
+
+              <h3>Weather App</h3>
+
+              <p>
+                A weather application deployed with Firebase Hosting,
+                created to practice frontend development and working
+                with weather data.
+              </p>
+
+              <a
+                href="https://weather-app-raja.web.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="project-back-link">
+                Open Live Demo
+                <i class="bi bi-arrow-up-right"></i>
+              </a>
+
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <article class="journey-card">
+
+              <div class="journey-icon">
+                <i class="bi bi-wallet2"></i>
+              </div>
+
+              <h3>SpendWise</h3>
+
+              <p>
+                An expense-tracking project created to practice
+                organizing financial entries and building
+                interactive web interfaces.
+              </p>
+
+              <a
+                href="https://github.com/akhaniraja89-rgb"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="project-back-link">
+                Explore GitHub
+                <i class="bi bi-arrow-up-right"></i>
+              </a>
+
+            </article>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Future Goals -->
+    <section class="journey-section">
+      <div class="container">
+
+        <div class="journey-cta" data-aos="fade-up">
+
+          <span class="journey-label">What's Next?</span>
+
+          <h2 class="mt-2">Always Learning. Always Building.</h2>
+
+          <p>
+            My next step is to strengthen JavaScript, improve my
+            frontend development skills, and build more complete
+            projects. Over time, I plan to expand into React and
+            other technologies as my foundations improve.
+          </p>
+
+          <div class="journey-actions">
+            <a href="index.html#portfolio" class="journey-button">
+              <i class="bi bi-code-slash"></i>
+              View Portfolio
+            </a>
+
+            <a href="index.html#contact"
+              class="journey-button journey-button-outline">
+              <i class="bi bi-envelope"></i>
+              Contact Me
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+
+      <div class="copyright text-center">
+        <p>
+          © <span id="copyright-year"></span>
+          <strong class="px-1 sitename">Raja Akhani</strong>
+          <span>All Rights Reserved</span>
+        </p>
+      </div>
+
+      <div class="credits text-center">
+        Designed and customized by
+        <a href="index.html">Raja Akhani</a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a
+    href="#"
+    id="scroll-top"
+    class="scroll-top d-flex align-items-center justify-content-center"
+    aria-label="Scroll to top">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+  <!-- Main JS -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Automatic Copyright Year -->
+  <script>
+    document.getElementById("copyright-year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
